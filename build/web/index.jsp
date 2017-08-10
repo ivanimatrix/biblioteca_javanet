@@ -44,7 +44,7 @@
 
                                 <div style="font-size:85%">
                                     Desea una cuenta?
-                                    <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                    <a href="javascript:void(0)" onClick="Login.registroNuevoUsuario();">
                                         Regístrese aquí
                                     </a>
                                 </div>
