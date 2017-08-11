@@ -10,7 +10,7 @@ var Login = {
         
         var error = "";
         
-        if(form.usuario.value == "" || form.pass.value == ""){
+        if(form.usuario.value === "" || form.pass.value === ""){
             error = "Debe ingresar las credenciales";
         }
         
@@ -20,6 +20,32 @@ var Login = {
             $(btn).html(btnText).prop('disabled',false);
         }else{
             
+            var formulario = $(form).serializeArray();
+            $.ajax({
+                url : '/Biblioteca/LoginUsuario',
+                data : formulario,
+                dataType : 'json',
+                type : 'post',
+                success : function(response){
+                    if(response.estado == true){
+                        window.location.href = "/Biblioteca/Menu";
+                    }else{
+                        $(btn).html(btnText).prop('disabled',false);
+                        BootstrapDialog.show({
+                            type: BootstrapDialog.TYPE_DANGER,
+                            title: 'Error',
+                            message: response.mensaje,
+                            buttons: [{
+                                label: 'Cerrar',
+                                cssClass : 'btn-danger',
+                                action : function(dialogItself){
+                                    dialogItself.close();
+                                }
+                            }]
+                        });
+                    }
+                }
+            });
         }
         
     },
@@ -111,6 +137,7 @@ var Login = {
                                 action : function(dialogItself){
                                     $button.enable();
                                     dialogItself.close();
+                                    modal.close();
                                 }
                             }]
                         });   

@@ -76,10 +76,14 @@ public class RegistrarUsuario extends HttpServlet {
         UsuarioDTO usuario = new UsuarioDTO(rut, pass, nombres, apellidos);
         UsuarioDAOImpl usuarioDAO = new UsuarioDAOImpl();
         
-        if(usuarioDAO.insert(usuario) > 0){
+        try{
+            usuarioDAO.insert(usuario);
             estado = true;
             mensaje = "Registro correcto. Ahora puede ingresar al sistema con su rut y contraseña";
+        }catch(SQLException e){
+            System.out.println("Error SQL : " + e.getMessage());
         }
+        
 
         String respuesta = "{\"estado\":" + estado + ", \"mensaje\":\"" + mensaje + "\"}";
         

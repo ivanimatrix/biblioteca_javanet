@@ -20,4 +20,6 @@ public interface UsuarioDAO {
 	public List<UsuarioDTO> select() throws SQLException;
         
         public UsuarioDTO selectById(int id_usuario) throws SQLException;
+        
+        public UsuarioDTO validarUsuario(String rut_usuario, String pass_usuario) throws SQLException;
 }
