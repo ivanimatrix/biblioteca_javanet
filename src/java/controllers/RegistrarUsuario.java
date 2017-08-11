@@ -5,12 +5,15 @@
  */
 package controllers;
 
+import DAO.UsuarioDAOImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import models.UsuarioDTO;
 
 /**
  *
@@ -29,19 +32,7 @@ public class RegistrarUsuario extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegistrarUsuario</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RegistrarUsuario at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -56,7 +47,7 @@ public class RegistrarUsuario extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
     }
 
     /**
@@ -70,15 +61,29 @@ public class RegistrarUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
         String rut = request.getParameter("rut");
         String nombres = request.getParameter("nombres");
         String apellidos = request.getParameter("apellidos");
         String pass = request.getParameter("clave");
+
+        response.setContentType("application/json");
+        response.setCharacterEncoding("utf-8");
+        PrintWriter out = response.getWriter();
         
+        String mensaje = "Hubo un problema al registrarse. Intente nuevamente";
+        boolean estado = false;
         
+        UsuarioDTO usuario = new UsuarioDTO(rut, pass, nombres, apellidos);
+        UsuarioDAOImpl usuarioDAO = new UsuarioDAOImpl();
         
+        if(usuarioDAO.insert(usuario) > 0){
+            estado = true;
+            mensaje = "Registro correcto. Ahora puede ingresar al sistema con su rut y contraseña";
+        }
+
+        String respuesta = "{\"estado\":" + estado + ", \"mensaje\":\"" + mensaje + "\"}";
         
+        out.println(respuesta);
     }
 
     /**

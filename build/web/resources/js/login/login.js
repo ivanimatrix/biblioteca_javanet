@@ -99,6 +99,7 @@ var Login = {
                 dataType : 'json',
                 data : formulario,
                 success : function(response){
+                    console.log(response);
                     if(response.estado == true){
                         BootstrapDialog.show({
                             type: BootstrapDialog.TYPE_SUCCESS,
