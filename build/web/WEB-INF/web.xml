@@ -16,6 +16,22 @@
         <servlet-name>Alumnos</servlet-name>
         <servlet-class>controllers.Alumnos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>controllers.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Libros</servlet-name>
+        <servlet-class>controllers.Libros</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Prestamo</servlet-name>
+        <servlet-class>controllers.Prestamo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Devolucion</servlet-name>
+        <servlet-class>controllers.Devolucion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistrarUsuario</servlet-name>
         <url-pattern>/RegistrarUsuario</url-pattern>
@@ -31,6 +47,22 @@
     <servlet-mapping>
         <servlet-name>Alumnos</servlet-name>
         <url-pattern>/Alumnos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Libros</servlet-name>
+        <url-pattern>/Libros</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Prestamo</servlet-name>
+        <url-pattern>/Prestamo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Devolucion</servlet-name>
+        <url-pattern>/Devolucion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

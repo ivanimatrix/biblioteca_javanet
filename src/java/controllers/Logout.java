@@ -12,13 +12,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import models.UsuarioDTO;
 
 /**
  *
  * @author ivanimatrix
  */
-public class Alumnos extends HttpServlet {
+public class Logout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,8 +31,10 @@ public class Alumnos extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        HttpSession sesion = request.getSession();
+        sesion.invalidate();
         
-        request.getRequestDispatcher("views/ingresar_alumno.jsp").forward(request, response);
+        response.sendRedirect("/Biblioteca");
         
     }
 

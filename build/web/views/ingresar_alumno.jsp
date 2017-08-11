@@ -11,14 +11,7 @@
     <body>
         <div class="container">
             
-            <div class="help-block pull-right">
-                <div class="alert alert-success text-center">
-                    <i class="fa fa-user"></i>
-                    <span style="display:block">
-                        ${nombre}
-                    </span>
-                </div>
-            </div>
+            <%@include file="info_usuario.jsp" %>
             <h1 class="page-header">Ingreso de Alumnos</h1>
             
             <div class="">
@@ -31,7 +24,7 @@
                                     <input type="text" class="form-control" name="rut" id="rut" placeholder="12345678-9"/>
                                     <div class="input-group-btn">
                                         <button type="button" class="btn btn-primary">
-                                            <i class="fa fa-search"></i>
+                                            <i class="fa fa-search"></i> Buscar
                                         </button>
                                     </div>
                                 </div>

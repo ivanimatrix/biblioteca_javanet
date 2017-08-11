@@ -1,12 +1,14 @@
 
+<%@page import="models.UsuarioDTO"%>
 <!DOCTYPE html>
 <html>
     <%@include file="head.html" %>
     
     <body>
         <div class="container">
-            <h1 class="page-header text-center">Menú del Sistema de Biblioteca</h1>
-            <div class="row">
+            <%@include file="info_usuario.jsp" %>
+            <h1 class="page-header text-left">Menú del Sistema de Biblioteca</h1>
+            <div class="">
                 <div class="col-xs-12 col-md-6 well">
                     <div class="text-center">
                         <a href="/Biblioteca/Alumnos">
