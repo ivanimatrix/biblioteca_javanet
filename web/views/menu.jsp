@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-xs-12 col-md-6 well">
                     <div class="text-center">
-                        <a href="/Biblioteca/Alumnos">
+                        <a href="/Biblioteca/Libros">
                             <i class="fa fa-book fa-5x"></i>
                             <span style="display:block;" class="fa fa-3x">Libros</span>
                         </a>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-xs-12 well">
                     <div class="text-center">
-                        <a href="/Biblioteca/Creditos">
+                        <a href="javascript:void(0);" onclick="Menu.verCreditos();">
                             <i class="fa fa-user fa-5x"></i>
                             <span style="display:block;" class="fa fa-3x">Créditos</span>
                         </a>
@@ -50,4 +50,6 @@
             </div>
         </div>
     </body>
+    
+    <script src="/Biblioteca/resources/js/menu/menu.js" charset="utf-8"></script>
 </html>
