@@ -12,7 +12,7 @@ public class Conexion {
 	//Valores de conexion a MySql
 	private static String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 	//El puerto es opcional
-	private static String JDBC_URL ="jdbc:mysql://localhost/biblioteca";
+	private static String JDBC_URL ="jdbc:mysql://localhost:3306/biblioteca";
 	private static String JDBC_USER = "biblioteca_user";
 	private static String JDBC_PASS = "biblioteca_pass";
 	private static Driver driver = null;
@@ -22,16 +22,16 @@ public class Conexion {
 	public static synchronized Connection getConnection()
 	throws SQLException{
 		if(driver == null){
-			try{
-				//Se registra el driver
-				Class jdbcDriverClass = Class.forName( JDBC_DRIVER);
-				driver = (Driver) jdbcDriverClass.newInstance();
-				DriverManager.registerDriver( driver );
-			}
-			catch(Exception e){
-				System.out.println("Fallo en cargar el driver JDBC");
-				e.printStackTrace();
-			}
+                    try{
+                            //Se registra el driver
+                            Class jdbcDriverClass = Class.forName( JDBC_DRIVER);
+                            driver = (Driver) jdbcDriverClass.newInstance();
+                            DriverManager.registerDriver( driver );
+                    }
+                    catch(Exception e){
+                            System.out.println("Fallo en cargar el driver JDBC");
+                            e.printStackTrace();
+                    }
 		}
 		return DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASS);
 	}
