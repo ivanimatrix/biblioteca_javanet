@@ -5,8 +5,10 @@
  */
 package controllers;
 
+import DAO.PrestamoDAOImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -30,6 +32,18 @@ public class Prestamo extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        PrestamoDAOImpl prestamoDAO = new PrestamoDAOImpl();
+        
+        int numero_prestamo = 0;
+        
+        try{
+            numero_prestamo = prestamoDAO.contar() + 1;
+
+        }catch(SQLException e){
+            System.out.println("Error SQL " + e.getMessage());
+        }
+        
+        request.setAttribute("numero_prestamo", numero_prestamo);
         request.getRequestDispatcher("views/prestamo_libro.jsp").forward(request, response);
     }
 

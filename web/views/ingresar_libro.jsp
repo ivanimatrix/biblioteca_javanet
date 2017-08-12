@@ -19,13 +19,14 @@
             <div class="">
                 <div class="well">
                     <form class="form-horizontal" role="form">
+                        <input type="hidden" name="id_libro" id="id_libro" value="0" />
                         <div class="form-group">
                             <label class="col-xs-12 col-md-4 control-label">Código</label>
                             <div class="col-xs-12 col-md-4">
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="codigo" id="codigo" />
                                     <div class="input-group-btn">
-                                        <button type="button" class="btn btn-primary">
+                                        <button type="button" class="btn btn-primary" onclick="Libros.buscarLibro(this);">
                                             <i class="fa fa-search"></i> Buscar
                                         </button>
                                     </div>
@@ -41,7 +42,7 @@
                         <div class="form-group">
                             <label class="col-xs-12 col-md-4 control-label">Cantidad</label>
                             <div class="col-xs-12 col-md-2">
-                                <input type="number" name="cantidad" id="cantidad" class="form-control" />
+                                <input type="number" name="cantidad" id="cantidad" class="form-control" min="0" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -70,9 +71,9 @@
                         <div class="form-group text-center">
                             <div class="col-xs-12">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-success btn-lg">Grabar</button>
-                                    <button type="button" class="btn btn-warning btn-lg">Editar</button>
-                                    <button type="button" class="btn btn-danger btn-lg">Eliminar</button>
+                                    <button type="button" class="btn btn-success btn-lg" onclick="Libros.guardarLibro(this.form, this)">Grabar</button>
+                                    <button type="button" class="btn btn-warning btn-lg" onclick="Libros.editarLibro(this.form, this)">Editar</button>
+                                    <button type="button" class="btn btn-danger btn-lg" onclick="Libros.eliminarLibro(this.form, this)">Eliminar</button>
                                     <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/Biblioteca/Menu'">Volver</button>
                                 </div>
                             </div>
@@ -84,5 +85,7 @@
             
         </div>
         
+        
     </body>
+    <script src="/Biblioteca/resources/js/libros/libros.js" charset="utf-8"></script>
 </html>

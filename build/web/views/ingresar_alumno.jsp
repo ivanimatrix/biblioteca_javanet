@@ -17,14 +17,15 @@
             <div class="">
                 <div class="well">
                     <form class="form-horizontal" role="form">
+                        <input type="hidden" name="id_alumno" id="id_alumno" value="0" />
                         <div class="form-group">
                             <label class="col-xs-12 col-md-4 control-label">Rut</label>
                             <div class="col-xs-12 col-md-4">
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="rut" id="rut" placeholder="12345678-9"/>
                                     <div class="input-group-btn">
-                                        <button type="button" class="btn btn-primary">
-                                            <i class="fa fa-search"></i> Buscar
+                                        <button type="button" class="btn btn-primary" onclick="Alumnos.buscarAlumno(this);">
+                                            <i class="fa fa-search"></i> Buscar 
                                         </button>
                                     </div>
                                 </div>
@@ -72,9 +73,9 @@
                         <div class="form-group text-center">
                             <div class="col-xs-12">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-success btn-lg">Grabar</button>
-                                    <button type="button" class="btn btn-warning btn-lg">Editar</button>
-                                    <button type="button" class="btn btn-danger btn-lg">Eliminar</button>
+                                    <button type="button" class="btn btn-success btn-lg" onclick="Alumnos.guardarAlumno(this.form, this);">Grabar</button>
+                                    <button type="button" class="btn btn-warning btn-lg" onclick="Alumnos.editarAlumno(this.form, this);">Editar</button>
+                                    <button type="button" class="btn btn-danger btn-lg" onclick="Alumnos.eliminarAlumno(this.form, this);">Eliminar</button>
                                     <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/Biblioteca/Menu'">Volver</button>
                                 </div>
                             </div>
@@ -85,4 +86,6 @@
             </div>
         </div>
     </body>
+    
+    <script src="/Biblioteca/resources/js/alumnos/alumnos.js" charset="utf-8"></script>
 </html>

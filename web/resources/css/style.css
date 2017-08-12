@@ -8,3 +8,8 @@ and open the template in the editor.
     Author     : ivanimatrix
 */
 
+.bootstrap-dialog .modal-header {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+

@@ -3,26 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/views/menu.jsp</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/index.jsp</file>
-<<<<<<< HEAD
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/Conexion.java</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/models/UsuarioDTO.java</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/UsuarioDAOImpl.java</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/UsuarioDAO.java</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/resources/js/base.js</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/views/registro.jsp</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/views/head.html</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/views/devolucion_libro.jsp</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/LibroDAOImpl.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/models/PrestamoDTO.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/resources/js/prestamos/prestamos.js</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/views/prestamo_libro.jsp</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/resources/js/libros/libros.js</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/BuscarPrestamo.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/Alumnos.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/BuscarAlumno.java</file>
             <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/resources/js/login/login.js</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/RegistrarUsuario.java</file>
-=======
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/models/UsuarioDTO.java</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/UsuarioDAOImpl.java</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/Menu.java</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/UsuarioDAO.java</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/resources/js/login/login.js</file>
-            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/LoginUsuario.java</file>
->>>>>>> f428a7572d425491964ee46d4d37db0d3385f411
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/PrestamoDAOImpl.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/BuscarLibro.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/Prestamo.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/resources/css/style.css</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/PrestamoDAO.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/GuardarPrestamo.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/web/resources/js/alumnos/alumnos.js</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/DAO/AlumnoDAOImpl.java</file>
+            <file>file:/home/ivanimatrix/NetBeansProjects/Biblioteca/src/java/controllers/EntregarPrestamo.java</file>
         </group>
     </open-files>
 </project-private>

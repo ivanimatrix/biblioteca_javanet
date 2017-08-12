@@ -32,6 +32,42 @@
         <servlet-name>Devolucion</servlet-name>
         <servlet-class>controllers.Devolucion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BuscarAlumno</servlet-name>
+        <servlet-class>controllers.BuscarAlumno</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GuardarAlumno</servlet-name>
+        <servlet-class>controllers.GuardarAlumno</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EliminarAlumno</servlet-name>
+        <servlet-class>controllers.EliminarAlumno</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BuscarLibro</servlet-name>
+        <servlet-class>controllers.BuscarLibro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GuardarLibro</servlet-name>
+        <servlet-class>controllers.GuardarLibro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EliminarLibro</servlet-name>
+        <servlet-class>controllers.EliminarLibro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GuardarPrestamo</servlet-name>
+        <servlet-class>controllers.GuardarPrestamo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BuscarPrestamo</servlet-name>
+        <servlet-class>controllers.BuscarPrestamo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EntregarPrestamo</servlet-name>
+        <servlet-class>controllers.EntregarPrestamo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistrarUsuario</servlet-name>
         <url-pattern>/RegistrarUsuario</url-pattern>
@@ -63,6 +99,42 @@
     <servlet-mapping>
         <servlet-name>Devolucion</servlet-name>
         <url-pattern>/Devolucion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuscarAlumno</servlet-name>
+        <url-pattern>/BuscarAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GuardarAlumno</servlet-name>
+        <url-pattern>/GuardarAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarAlumno</servlet-name>
+        <url-pattern>/EliminarAlumno</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuscarLibro</servlet-name>
+        <url-pattern>/BuscarLibro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GuardarLibro</servlet-name>
+        <url-pattern>/GuardarLibro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarLibro</servlet-name>
+        <url-pattern>/EliminarLibro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GuardarPrestamo</servlet-name>
+        <url-pattern>/GuardarPrestamo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuscarPrestamo</servlet-name>
+        <url-pattern>/BuscarPrestamo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EntregarPrestamo</servlet-name>
+        <url-pattern>/EntregarPrestamo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
